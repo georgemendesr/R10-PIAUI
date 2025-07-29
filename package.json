@@ -15,8 +15,7 @@
     "test:e2e": "playwright test",
     "test:qa": "run-s build test:e2e test:unit",
     "social:server": "cd server && node --loader ts-node/esm index.ts",
-    "start": "node server-production.js",
-    "postbuild": "npm run build"
+    "start": "node server-production.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
