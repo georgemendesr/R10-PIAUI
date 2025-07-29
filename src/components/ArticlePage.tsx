@@ -164,26 +164,23 @@ const ArticlePage: React.FC<ArticlePageProps> = ({ articleData }) => {
             {/* Main Content */}
             <div className="col-span-12 lg:col-span-8">
               {/* Breadcrumb */}
-              <nav className="text-sm text-gray-500 mb-6">
-                <Link to="/" className="hover:text-brand">Home</Link>
-                <span className="mx-2">•</span>
-                <span className="text-brand font-medium">{article.category}</span>
+              <nav className="text-sm text-gray-500 mb-4 hidden md:block">
+                <Link to="/" className="hover:text-brand transition-colors">Home</Link>
+                <span className="mx-2">/</span>
+                <span className="text-gray-700">{article.category}</span>
               </nav>
 
-              {/* Article Header */}
-              <header className="mb-8">
-                <div className="mb-4 flex items-center gap-3">
-                  <span className="inline-block bg-red-600 text-white px-3 py-1 text-xs font-bold uppercase tracking-wide rounded">
-                    EXCLUSIVO
-                  </span>
-                  <span className="inline-block bg-gray-600 text-white px-3 py-1 text-xs font-bold uppercase tracking-wide rounded">
-                    {article.category}
-                  </span>
-                </div>
-                
-                <h1 className="text-3xl md:text-4xl font-black leading-tight text-neutral900 mb-4 font-poppins">
-                  {article.title}
-                </h1>
+              {/* Chapéu */}
+              <div className="mb-4">
+                <span className="hat">
+                  {article.category}
+                </span>
+              </div>
+
+              {/* Título Principal */}
+              <h1 className="title-h1 mb-4">
+                {article.title}
+              </h1>
                 
                 <p className="text-xl text-gray-700 leading-relaxed mb-6 font-rubik">
                   {article.subtitle}
@@ -203,7 +200,6 @@ const ArticlePage: React.FC<ArticlePageProps> = ({ articleData }) => {
                     <span>📖 {article.readTime} de leitura</span>
                   </div>
                 </div>
-              </header>
 
               {/* Audio Player */}
               <AudioPlayer content={`${article.title}. ${article.subtitle}. ${article.content.join(' ')}`} />
