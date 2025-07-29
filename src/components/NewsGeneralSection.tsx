@@ -117,7 +117,7 @@ const NewsGeneralSection = () => {
                     <span className="tag mb-1 block">
                       {news.chapeu}
                     </span>
-                    <h4 className={`headline ${getEditorialClasses(news.category).title} text-lg md:text-xl leading-tight`}>
+                    <h4 className={`headline ${getEditorialClasses(news.category).title} text-lg md:text-xl leading-none`}>
                       {news.title}
                     </h4>
                   </div>
@@ -141,7 +141,7 @@ const NewsGeneralSection = () => {
                     <span className="tag mb-1 block">
                       {news.chapeu}
                     </span>
-                    <h4 className={`headline ${getEditorialClasses(news.category).title} text-lg md:text-xl leading-tight`}>
+                    <h4 className={`headline ${getEditorialClasses(news.category).title} text-lg md:text-xl leading-none`}>
                       {news.title}
                     </h4>
                   </div>

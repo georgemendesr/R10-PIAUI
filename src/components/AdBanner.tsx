@@ -36,22 +36,22 @@ const AdBanner: React.FC<AdBannerProps> = ({ position, className = '' }) => {
   const getSizeClasses = (tamanho: Banner['tamanho']) => {
     // Para news-sidebar, usar o mesmo tamanho da imagem principal
     if (position === 'news-sidebar') {
-      return 'w-full h-80';
+      return 'w-full h-80 ad-300x250';
     }
     
     switch (tamanho) {
       case '728x90':
-        return 'w-[728px] h-[90px] max-w-full';
+        return 'w-[728px] h-[90px] max-w-full ad-970x90';
       case '300x250':
-        return 'w-[300px] h-[250px]';
+        return 'w-[300px] h-[250px] ad-300x250';
       case '160x600':
-        return 'w-[160px] h-[600px]';
+        return 'w-[160px] h-[600px] ad-300x600';
       case '320x50':
-        return 'w-[320px] h-[50px] max-w-full';
+        return 'w-[320px] h-[50px] max-w-full ad-970x90';
       case '970x250':
-        return 'w-[970px] h-[250px] max-w-full';
+        return 'w-[970px] h-[250px] max-w-full ad-970x250';
       case '300x600':
-        return 'w-[300px] h-[600px]';
+        return 'w-[300px] h-[600px] ad-300x600';
       default:
         return 'w-full h-auto';
     }

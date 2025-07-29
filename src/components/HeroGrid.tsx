@@ -58,11 +58,11 @@ const HeroGrid = () => {
   ];
 
   return (
-    <section className="bg-white py-6 font-body">
+    <section className="bg-gray-50 py-6 font-body">
       <div className="container mx-auto px-4 max-w-[1250px]">
         <div className="grid grid-cols-1 lg:grid-cols-[620px_1fr] gap-6">
           {/* Notícia Principal */}
-          <article className="bg-white bar-left bar-geral">
+          <article className="bg-white bar-left bar-geral rounded-xl shadow-lg p-6 border-l-4 border-brand">
             <div className="w-full h-[400px] rounded-xl overflow-hidden mb-5 tint geral">
               <img 
                 src={mainArticle.image}

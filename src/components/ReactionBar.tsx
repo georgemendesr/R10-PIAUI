@@ -93,13 +93,14 @@ const ReactionBar: React.FC<ReactionBarProps> = ({ articleId }) => {
             disabled={!!userReaction}
             aria-label={`Reagir com ${reaction.label}`}
             data-e2e={`rx-${reaction.key}`}
-            className={`flex flex-col items-center gap-1 cursor-pointer text-xs md:text-sm p-2 rounded-lg transition-all duration-300 ${
+            className={`flex flex-col items-center gap-1 cursor-pointer text-xs md:text-sm p-2 rounded-lg transition-all duration-300 min-w-[44px] min-h-[44px] ${
               userReaction === reaction.key 
                 ? 'bg-brand/10 border-2 border-brand scale-110' 
                 : userReaction 
                   ? 'opacity-50 cursor-not-allowed' 
-                  : 'hover:bg-white hover:shadow-md hover:scale-105'
+                  : 'hover:bg-gray-100 hover:scale-105'
             }`}
+            aria-pressed={userReaction === reaction.key}
           >
             <span className="text-3xl md:text-4xl" aria-hidden="true">{reaction.emoji}</span>
             <span className="font-medium text-gray-700">{reaction.label}</span>

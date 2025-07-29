@@ -18,14 +18,11 @@ const HeroHeadline = () => {
 
             
             {/* Conteúdo da Manchete */}
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <span className="tag bg-white/20 text-white mb-3 inline-block">
-                POLÍTICA
-              </span>
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
               <h1 className="headline text-4xl md:text-5xl mb-4 text-white font-bold">
                 Nova Política de Transporte Público em Teresina Promete Revolucionar Mobilidade Urbana
               </h1>
-              <p className="text-xl text-white/90 leading-relaxed max-w-3xl font-rubik">
+              <p className="text-xl text-white/90 leading-relaxed max-w-3xl font-rubik mx-auto">
                 Sistema integrado de ônibus e metrô será implementado em 2024 com investimento de R$ 500 milhões
               </p>
             </div>

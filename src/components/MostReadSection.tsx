@@ -83,8 +83,8 @@ const MostReadSection = () => {
                   <div className="absolute inset-0 bg-black/20 rounded-lg group-hover:bg-black/10 transition-colors"></div>
                   
                   {/* Ranqueamento por cima da imagem */}
-                  <div className="absolute top-2 right-2 w-6 h-6 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center transform rotate-12">
-                    <span className="text-white font-black text-sm">{index + 1}</span>
+                  <div className="absolute top-2 right-2 w-8 h-8 bg-brand/90 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white shadow-lg">
+                    <span className="text-white font-black text-lg">{index + 1}</span>
                   </div>
                 </div>
                 

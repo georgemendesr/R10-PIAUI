@@ -44,7 +44,7 @@ const R10PlaySection = () => {
           <div className="flex items-center justify-center mb-6">
             <div className="relative group">
               <img 
-                src="/dist/lovable-uploads/logor10play.png" 
+                src="/lovable-uploads/LOGO-R10-PLAY.png" 
                 alt="R10 Play - Canal Oficial" 
                 className="h-20 w-auto drop-shadow-2xl transform group-hover:scale-105 transition-all duration-300" 
               />
@@ -81,7 +81,9 @@ const R10PlaySection = () => {
           {videos.map((video, index) => (
             <article 
               key={video.id}
-              className="group cursor-pointer bg-gradient-to-br from-neutral800 to-neutral900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-red-500/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-neutral700 hover:border-red-500/50"
+              className={`group cursor-pointer bg-gradient-to-br from-neutral800 to-neutral900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-red-500/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-neutral700 hover:border-red-500/50 ${
+                index === 0 ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-red-900/20 to-orange-900/20 border-red-500/30' : ''
+              }`}
               onClick={() => openVideo(video.url)}
             >
               {/* Thumbnail com Overlay Premium */}
@@ -89,7 +91,9 @@ const R10PlaySection = () => {
                 <img 
                   src={video.thumbnail}
                   alt={video.title}
-                  className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
+                    index === 0 ? 'h-64' : 'h-52'
+                  }`}
                 />
                 
                 {/* Overlay Gradiente */}
@@ -98,14 +102,18 @@ const R10PlaySection = () => {
                 {/* Play Button Premium */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button 
-                    className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+                    className={`bg-red-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform ${
+                      index === 0 ? 'w-20 h-20' : 'w-16 h-16'
+                    }`}
                     aria-label={`Reproduzir vídeo: ${video.title}`}
                     onClick={(e) => {
                       e.stopPropagation();
                       openVideo(video.url);
                     }}
                   >
-                    <Play className="w-6 h-6 text-white ml-1" aria-hidden="true" />
+                    <Play className={`text-white ml-1 ${
+                      index === 0 ? 'w-8 h-8' : 'w-6 h-6'
+                    }`} aria-hidden="true" />
                   </button>
                 </div>
 
@@ -128,13 +136,19 @@ const R10PlaySection = () => {
               </div>
 
               {/* Informações do Vídeo */}
-              <div className="p-6">
-                <h3 className="text-base font-bold text-white leading-tight line-clamp-2 mb-4 group-hover:text-red-400 transition-colors duration-300">
+              <div className={`p-6 ${
+                index === 0 ? 'text-center' : ''
+              }`}>
+                <h3 className={`font-bold text-white leading-tight line-clamp-2 mb-4 group-hover:text-red-400 transition-colors duration-300 ${
+                  index === 0 ? 'text-xl' : 'text-base'
+                }`}>
                   {video.title}
                 </h3>
 
                 {/* Estatísticas */}
-                <div className="flex items-center justify-between text-sm text-gray-400">
+                <div className={`flex items-center justify-between text-sm text-gray-400 ${
+                  index === 0 ? 'justify-center gap-8' : ''
+                }`}>
                   <div className="flex items-center gap-2">
                     <Eye className="w-4 h-4 text-red-400" />
                     <span className="font-medium">{video.viewCount}</span>

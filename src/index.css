@@ -8,22 +8,22 @@
   --ed-policia:#D32F2F;  /* mais escuro para melhor contraste */
   --ed-politica:#7A1F2B;
 
-  /* ESPORTE — verde mais escuro para melhor contraste */
+  /* ESPORTE — verde mais VIVO */
   --ed-esporte-500:#22C55E;   /* hover */
-  --ed-esporte-600:#15803D;   /* base - mais escuro */
-  --ed-esporte-700:#166534;   /* active - ainda mais escuro */
+  --ed-esporte-600:#16A34A;   /* base - mais vivo */
+  --ed-esporte-700:#15803D;   /* active */
 
-  /* ENTRETENIMENTO — laranja mais escuro para melhor contraste */
+  /* ENTRETENIMENTO — laranja mais VIVO */
   --ed-entre-500:#F97316;     /* hover */
-  --ed-entre-600:#C2410C;     /* base - mais escuro */
-  --ed-entre-700:#9A3412;     /* active - ainda mais escuro */
+  --ed-entre-600:#EA580C;     /* base - mais vivo */
+  --ed-entre-700:#C2410C;     /* active */
 
   /* GERAL neutro */
   --ed-geral:#424242;
 }
 
-/* Chapéu permanece neutro */
-.tag{ color:#555; text-transform:uppercase; font-size:10px; font-weight:600; }
+/* Chapéu MAIOR */
+.tag{ color:#555; text-transform:uppercase; font-size:12px; font-weight:600; }
 
 /* Base dos títulos (mais sutil) */
 .headline{
